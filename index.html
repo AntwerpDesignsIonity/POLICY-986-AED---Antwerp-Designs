@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ionity | AI, IoT & Power-Saving Hardware Ecosystems | Antwerp Designs</title>
+    <meta name="description" content="Ionity designs secure Cloud, Edge, AI, and IoT ecosystems. We build power-saving hardware units, SCADA systems, and custom software for global automation.">
+    <meta name="keywords" content="Ionity, Antwerp Designs, AEDI, IoT, AI, Cloud Systems, Edge Computing, Hardware Design, Power Saving Units, SCADA, PdM, CMS, DAQ, F-iT">
+    <meta name="author" content="Johan Wilhelm van Antwerp">
+    <meta name="copyright" content="© 2018–2026 Antwerp Designs | Ionity (Pty) Ltd">
+    <meta name="geo.region" content="ZA-GT">
+    <meta name="geo.placename" content="Pretoria">
+    <meta name="geo.position" content="-25.7479;28.2293">
+    <meta name="ICBM" content="-25.7479, 28.2293">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 0 40px rgba(0, 191, 255, 0.3);
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #000000 0%, #1a1a2e 100%);
+            color: white;
+            margin: -20px -20px 40px -20px;
+            border-bottom: 4px solid #00BFFF;
+        }
+
+        .typing-animation {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            margin: 0 auto 30px;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .badge:hover {
+            transform: translateY(-3px);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #00BFFF;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #00BFFF;
+            font-size: 2em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #00BFFF;
+        }
+
+        h3 {
+            color: #0056b3;
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .quote {
+            font-size: 1.3em;
+            font-style: italic;
+            text-align: center;
+            color: #00BFFF;
+            padding: 30px;
+            margin: 30px 0;
+            background: linear-gradient(135deg, rgba(0, 191, 255, 0.1) 0%, rgba(0, 86, 179, 0.1) 100%);
+            border-left: 5px solid #00BFFF;
+            border-radius: 5px;
+        }
+
+        .section {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: linear-gradient(135deg, #00BFFF 0%, #0056b3 100%);
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        ul {
+            list-style-position: inside;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+            padding-left: 10px;
+        }
+
+        strong {
+            color: #0056b3;
+        }
+
+        a {
+            color: #00BFFF;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+
+        pre {
+            background: #1e1e1e;
+            color: #00BFFF;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        pre code {
+            background: transparent;
+            color: #00BFFF;
+            padding: 0;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00BFFF, transparent);
+            margin: 40px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            background: linear-gradient(135deg, #000000 0%, #1a1a2e 100%);
+            color: white;
+            margin: 40px -20px -20px -20px;
+            border-top: 4px solid #00BFFF;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .badges {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0, 191, 255, 0.15) 0%, rgba(0, 86, 179, 0.15) 100%);
+            border-left: 5px solid #00BFFF;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="https://git.io/typing-svg">
+                <img class="typing-animation" src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=900&size=60&duration=4000&pause=1000&color=00BFFF&center=true&vCenter=true&width=1200&height=120&lines=IONITY+%7C+Antwerp+Designs;AI+%E2%80%A2+IoT+%E2%80%A2+HARDWARE;Building+Tomorrow%2C+Today" alt="Typing SVG" />
+            </a>
+            
+            <div class="badges">
+                <a href="https://www.linkedin.com/in/ionity" class="badge">
+                    <img src="https://img.shields.io/badge/Author-Johan_van_Antwerp-0056b3?style=for-the-badge&logo=linkedin" alt="Author Badge" />
+                </a>
+                <a href="https://www.ionity.today" class="badge">
+                    <img src="https://img.shields.io/badge/System-IONITY_OS-000000?style=for-the-badge&logo=ubuntu" alt="System Badge" />
+                </a>
+                <a href="https://google.com/maps/place/Pretoria" class="badge">
+                    <img src="https://img.shields.io/badge/Region-South_Africa-00d2ff?style=for-the-badge&logo=google-maps&logoColor=black" alt="Region Badge" />
+                </a>
+            </div>
+        </header>
+
+        <div class="quote">
+            ❝ Building Tomorrow, Today. Anything is Possible with God. ❞
+        </div>
+
+        <section class="section">
+            <h2>1. Identity (Author / Creator)</h2>
+            <ul>
+                <li><strong>Author / Creator:</strong> Johan Wilhelm van Antwerp</li>
+                <li><strong>Organization:</strong> Ionity / Antwerp Designs / AEDI (Antwerp Ecosystems Designs Ionity)</li>
+                <li><strong>Author ID:</strong> <code>9003135105083</code></li>
+                <li><strong>ORCID:</strong> <a href="https://orcid.org/0009-0005-7181-0347" target="_blank">0009-0005-7181-0347</a></li>
+                <li><strong>GitHub Login:</strong> <code>AntwerpDesignsIonity</code></li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>2. Brand & Company Overview</h2>
+            <div class="highlight-box">
+                <p><strong>Ionity</strong> (formerly Antwerp Designs, Est. 2018) is a global ecosystem solutionist specializing in the convergence of AI, IoT, and high-performance hardware.</p>
+            </div>
+            <ul>
+                <li><strong>Tagline:</strong> <em>Ecosystems Solutionist | IoT Engineer</em></li>
+                <li><strong>Origin:</strong> Grew out of Antwerp Designs (Product Design) to become its own Unity in IO (<strong>Ionity</strong>) in 2022/2025.</li>
+                <li><strong>Philosophy:</strong> Precision, Performance, and Long-term Stability.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>3. Markets, Capabilities & Technology</h2>
+            <p><strong>FOCUS on IoT AI IT SYSTEMS CLOUD HARDWARE SOFTWARE OF IONITY in webcontext.</strong></p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Core Markets</strong></td>
+                        <td>Integrations, Cloud, EDGE, AI, IoT, Hardware, Software</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Specialization</strong></td>
+                        <td><strong>Hardware design and development</strong>, including <strong>power-saving units</strong> to support a better tomorrow.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Industrial</strong></td>
+                        <td>PdM, CMS, DAQ, F-iT, Cyber Security & Encryptions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Roles</strong></td>
+                        <td>Ecosystems Solutionist, IoT Engineer, Toolmaker, Integration Specialist</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Global Position</strong></td>
+                        <td>Global Intent | Location: <strong>South Africa</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Offer / Work Summary</h3>
+            <div class="highlight-box">
+                <p>Ionity / Antwerp Designs designs and builds secure systems that connect devices, automate operations, and unlock real-time intelligence across industries—covering <strong>edge computing</strong>, <strong>embedded hardware</strong>, <strong>cloud architecture</strong>, and <strong>custom software</strong>.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>4. Websites & Presence</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Platform</th>
+                        <th>URL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Primary Hub</strong></td>
+                        <td><a href="https://www.ionity.today/" target="_blank">https://www.ionity.today/</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Profile</strong></td>
+                        <td><a href="https://www.ionity.world/" target="_blank">https://www.ionity.world/</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>LinkedIn</strong></td>
+                        <td><a href="https://www.linkedin.com/in/ionity" target="_blank">linkedin.com/in/ionity</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Facebook</strong></td>
+                        <td><a href="https://www.facebook.com/people/Ionity/61587016452256/" target="_blank">Ionity Official</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>GitHub Org</strong></td>
+                        <td><a href="https://github.com/Antwerp-Ecosystem-Designs-Ionity" target="_blank">Antwerp-Ecosystem-Designs-Ionity</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>5. Contact Details</h2>
+            <ul>
+                <li><strong>Email:</strong> <code>johan@ionity.today</code> | <code>ai@ionity.today</code></li>
+                <li><strong>Admin:</strong> <code>services@ionity.world</code> | <code>admin@ionity.today</code></li>
+                <li><strong>Personal:</strong> <code>johanvanantwerp@gmail.com</code></li>
+                <li><strong>Phone:</strong> <code>+27 64 699 9877</code></li>
+                <li><strong>Location:</strong> Pretoria, Gauteng, South Africa (ZAR)</li>
+                <li><strong>Internal Note:</strong> IP <code>41.150.***.**</code> (Private)</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>6. Legal & Rights</h2>
+            <ul>
+                <li><strong>Signature:</strong> "Antwerp Designs | Ionity or Ionity (Pty) Ltd"</li>
+                <li><strong>Policy:</strong> AED 986 (Policy 986)</li>
+                <li><strong>License:</strong> AED 900 (Hardware & Software)</li>
+                <li><strong>Rights:</strong> All rights reserved | TM² | CC BY-NC-SA 4.0 | 2018–2026</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section class="section">
+            <h2>7. Developer Resources (Copy-Paste Metadata)</h2>
+            <p><em>Use the code blocks below for web integration (<code>index.html</code>).</em></p>
+
+            <h3>A. HTML Meta Tags (SEO)</h3>
+            <pre><code>&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Ionity | AI, IoT &amp; Power-Saving Hardware Ecosystems | Antwerp Designs&lt;/title&gt;
+&lt;meta name="description" content="Ionity designs secure Cloud, Edge, AI, and IoT ecosystems. We build power-saving hardware units, SCADA systems, and custom software for global automation."&gt;
+&lt;meta name="keywords" content="Ionity, Antwerp Designs, AEDI, IoT, AI, Cloud Systems, Edge Computing, Hardware Design, Power Saving Units, SCADA, PdM, CMS, DAQ, F-iT"&gt;
+&lt;meta name="author" content="Johan Wilhelm van Antwerp"&gt;
+&lt;meta name="copyright" content="© 2018–2026 Antwerp Designs | Ionity (Pty) Ltd"&gt;
+&lt;meta name="geo.region" content="ZA-GT"&gt;
+&lt;meta name="geo.placename" content="Pretoria"&gt;
+&lt;meta name="geo.position" content="-25.7479;28.2293"&gt;
+&lt;meta name="ICBM" content="-25.7479, 28.2293"&gt;</code></pre>
+        </section>
+
+        <footer>
+            <p>&copy; 2018–2026 Antwerp Designs | Ionity (Pty) Ltd</p>
+            <p>All rights reserved | TM² | CC BY-NC-SA 4.0</p>
+            <p style="margin-top: 15px;">
+                <a href="https://www.ionity.today/" style="color: #00BFFF; margin: 0 10px;">www.ionity.today</a> | 
+                <a href="https://www.ionity.world/" style="color: #00BFFF; margin: 0 10px;">www.ionity.world</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
